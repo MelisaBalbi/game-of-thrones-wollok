@@ -1,0 +1,48 @@
+import gameOfThrone.*
+test "encontrar artefactos" {
+	dany.encontrar(espada)
+	dany.encontrar(libro)
+	dany.encontrar(collar)
+	assert.equals( #{espada, libro}, dany.artefactos() )
+}
+
+test "castillo" {
+	dany.encontrar(espada)
+	dany.encontrar(libro)
+	dany.volverA(castillo)
+ 	dany.encontrar(collar)
+ 	dany.volverA(castillo)
+ 	assert.that(dany.artefactos().isEmpty())
+ 	assert.equals(#{espada,libro,collar}, castillo.artefactos())
+}
+
+test "posesiones" {
+	castillo.agregarArtefactos(#{collar, espada})
+	dany.encontrar(armadura)
+	assert.equals(#{collar, armadura, espada}, dany.posesiones())
+	assert.that(dany.tiene(armadura))
+	assert.notThat(dany.tiene(libro))	
+}
+
+test "historia" {
+	dany.encontrar(espada)
+	dany.encontrar(libro)
+	dany.encontrar(collar)
+	dany.volverA(castillo)
+	dany.encontrar(armadura)
+	dany.encontrar(collar)
+  assert.equals([espada, libro, collar, armadura, collar], dany.historia())	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

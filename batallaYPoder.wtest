@@ -1,0 +1,45 @@
+import gameOfThrone.*
+
+test "batalla" {
+	dany.capacidad(3)
+	dany.encontrar(espada)
+	dany.encontrar(armadura)
+	dany.encontrar(collar)
+	
+	assert.equals( 5 , dany.poderBase())
+	assert.equals( 5 , espada.poder(dany))
+	assert.equals( 6 , armadura.poder(dany))
+	assert.equals( 3 , collar.poder(dany))
+	
+	dany.batalla()
+	
+	assert.equals( 6 , dany.poderBase())
+	assert.equals( 3 , espada.poder(dany))
+	assert.equals( 6 , armadura.poder(dany))
+	assert.equals( 3 , collar.poder(dany))
+
+	dany.batalla()
+	
+	assert.equals( 7 , dany.poderBase())
+	assert.equals( 3.5 , espada.poder(dany))
+	assert.equals( 6 , armadura.poder(dany))
+	assert.equals( 5 , collar.poder(dany))
+
+	dany.batalla()
+	
+	assert.equals( 8 , dany.poderBase())
+	assert.equals( 4 , espada.poder(dany))
+	assert.equals( 6 , armadura.poder(dany))
+	assert.equals( 6 , collar.poder(dany))
+	
+}
+
+test "poder de dany" {
+
+	dany.capacidad(3)
+	dany.encontrar(espada)
+	dany.encontrar(armadura)
+	dany.encontrar(collar)
+	assert.equals(19, dany.poder())
+
+}
