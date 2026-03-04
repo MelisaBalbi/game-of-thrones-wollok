@@ -2,7 +2,7 @@
 
 Proyecto individual desarrollado en Wollok, enfocado en el modelado de dominio y la aplicación de Programación Orientada a Objetos.
 
-📌 Sobre el proyecto
+## 📌 Sobre el proyecto
 
 Este proyecto simula un sistema donde un personaje puede recolectar distintos artefactos y utilizarlos estratégicamente para enfrentar enemigos.
 
@@ -22,7 +22,7 @@ Modelado orientado al dominio
 
 El foco principal no está en lo visual, sino en la correcta distribución de responsabilidades y diseño de objetos.
 
-💻 ¿Qué es Wollok?
+## 💻 ¿Qué es Wollok?
 
 Wollok es un lenguaje educativo orientado a objetos utilizado en entornos académicos para aprender y practicar conceptos fundamentales de POO.
 
@@ -38,6 +38,6 @@ Composición
 
 Testing
 
-🎯 Objetivo
+## 🎯 Objetivo
 
 Desarrollar la capacidad de modelar un problema utilizando objetos con responsabilidades claras, priorizando diseño y lógica por sobre la interfaz.
